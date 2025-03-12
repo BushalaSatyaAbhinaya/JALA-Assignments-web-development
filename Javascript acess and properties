@@ -1,5 +1,324 @@
 1. Write program using this keyword when we click on button, it should be disappear.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide Button on Click</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="hideButton(this)">Click to Hide Me</button>
+
+    <script>
+        function hideButton(buttonElement) {
+            // Using 'this' to reference the clicked button and hide it
+            buttonElement.style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
+
 2. Invoke a function using call() and apply(). Also Spot the difference between them.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call() and apply() Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>JavaScript call() and apply() Example</h2>
+
+    <button onclick="demonstrateCall()">Demonstrate call()</button>
+    <button onclick="demonstrateApply()">Demonstrate apply()</button>
+
+    <script>
+        function greet(greeting, punctuation) {
+            return `${greeting}, ${this.name}${punctuation}`;
+        }
+
+        const person = {
+            name: 'Abhi'
+        };
+
+        function demonstrateCall() {
+            const result = greet.call(person, 'Hello', '!');
+            alert('Using call(): ' + result); // Output: Hello, John!
+        }
+
+        function demonstrateApply() {
+            const result = greet.apply(person, ['Hello', '!']);
+            alert('Using apply(): ' + result); // Output: Hello, John!
+        }
+    </script>
+
+</body>
+</html>
+
 3. Write a program for COUNTER. Whenever we click on a "Count" button, value should increment.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Program</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+
+        #counter {
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Counter Program</h1>
+    
+    <div id="counter">0</div>
+    
+    <button onclick="incrementCounter()">Count</button>
+
+    <script>
+        let count = 0; // Initialize counter
+
+        function incrementCounter() {
+            count++; // Increment counter by 1
+            document.getElementById('counter').textContent = count; // Update counter value in HTML
+        }
+    </script>
+
+</body>
+</html>
+
 4. Create a Counter with the help of getter and setter accessors.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter with Getter and Setter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+
+        #counter {
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Counter with Getter and Setter</h1>
+    
+    <div id="counter">0</div>
+    
+    <button onclick="incrementCounter()">Count</button>
+
+    <script>
+        class Counter {
+            constructor() {
+                this._count = 0;  
+            }
+
+            get count() {
+                return this._count;
+            }
+
+            set count(value) {
+                this._count = value;
+            }
+
+            increment() {
+                this.count = this.count + 1;  
+            }
+        }
+
+        const counter = new Counter();  
+
+        function incrementCounter() {
+            counter.increment(); 
+            document.getElementById('counter').textContent = counter.count;  // Display the updated value
+        }
+    </script>
+
+</body>
+</html>
+
 5. Add some more properties to an existing function using object prototypes.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter with Prototype Extension</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+
+        #counter {
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Counter with Prototype Extension</h1>
+    
+    <div id="counter">0</div>
+    
+    <button onclick="incrementCounter()">Count</button>
+    <button onclick="resetCounter()">Reset</button>
+    <button onclick="doubleCounter()">Double</button>
+
+    <script>
+        function Counter() {
+            this._count = 0;
+        }
+
+        Counter.prototype.getCount = function() {
+            return this._count;
+        }
+
+        Counter.prototype.setCount = function(value) {
+            this._count = value;
+        }
+
+        Counter.prototype.increment = function() {
+            this.setCount(this.getCount() + 1);
+        }
+
+        Counter.prototype.reset = function() {
+            this.setCount(0);
+        }
+
+        Counter.prototype.double = function() {
+            this.setCount(this.getCount() * 2);
+        }
+
+        const counter = new Counter();
+
+        function incrementCounter() {
+            counter.increment();
+            document.getElementById('counter').textContent = counter.getCount();
+        }
+        function resetCounter() {
+            counter.reset();
+            document.getElementById('counter').textContent = counter.getCount();
+        }
+
+        function doubleCounter() {
+            counter.double();
+            document.getElementById('counter').textContent = counter.getCount();
+        }
+
+    </script>
+
+</body>
+</html>
