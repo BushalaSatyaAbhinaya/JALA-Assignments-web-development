@@ -1,1 +1,4 @@
-
+1. Develop a web page with non-semantic elements <div> and <span>
+2. Develop a web page with the semantic elements <form>, <table> and <article>
+3. Use all the HTML5 tags and develop a web page
+article, aside, figcaption, figure,footer,header, hgroup,mark,nav, section,time
