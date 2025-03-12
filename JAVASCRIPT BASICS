@@ -1,1 +1,6 @@
-
+1. Write a program which consist of single line and multiline comments.
+2. Create an array consisting of fruits names and when we click on a button sort it in descending order.
+3. Write a program with FOR/IN loop.
+4. Create an object "person" with properties firstname and lastname. Display these properties using 2 different ways of accessing.
+5. Write a program with variable hoisting(initialization first then declaration).
+6. Use strict mode in your program and understand why variable not declared causes error.
