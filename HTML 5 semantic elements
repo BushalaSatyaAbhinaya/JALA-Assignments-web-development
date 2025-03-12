@@ -1,5 +1,331 @@
 1. Develop a web page with non-semantic elements <div> and <span>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non-Semantic Elements</title>
+    <style>
+        .container {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border: 2px solid #ddd;
+            text-align: center;
+        }
+
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            background-color: #28a745;
+            color: white;
+            padding: 20px;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            color: #ff5733;
+            font-weight: bold;
+        }
+
+        .note {
+            color: #ffc107;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            Non-Semantic Elements Example
+        </div>
+
+        <div class="content">
+            Welcome to this <span class="highlight">simple example</span> of using <span class="highlight">non-semantic elements</span> like <strong>&lt;div&gt;</strong> and <strong>&lt;span&gt;</strong> to structure a page.
+        </div>
+
+        <span class="note">Note: Although div and span are not semantically meaningful, they are useful for layout and styling.</span>
+    </div>
+
+</body>
+</html>
+
 2. Develop a web page with the semantic elements <form>, <table> and <article>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Elements Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        form input, form select, form button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        form button {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        article {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        article h2 {
+            color: #333;
+        }
+
+        article p {
+            font-size: 16px;
+            color: #555;
+        }
+
+    </style>
+</head>
+<body>
+
+    <article>
+        <h2>Web Development Tips</h2>
+        <p>In this article, we will explore some useful tips and tricks for web development using semantic HTML elements. Using semantic elements enhances the readability and accessibility of your webpages.</p>
+    </article>
+
+    <form action="/submit" method="POST">
+        <h2>Registration Form</h2>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <table>
+        <caption>Employee List</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Department</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>SATYA</td>
+                <td>Software Engineer</td>
+                <td>Engineering</td>
+            </tr>
+            <tr>
+                <td>ABHI</td>
+                <td>Product Manager</td>
+                <td>Product</td>
+            </tr>
+            <tr>
+                <td>RAMA</td>
+                <td>UX Designer</td>
+                <td>Design</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
+
 3. Use all the HTML5 tags and develop a web page
 article, aside, figcaption, figure,footer,header, hgroup,mark,nav, section,time
 Good to
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Semantic Elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header, footer {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        article {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #e9ecef;
+            border-radius: 8px;
+        }
+
+        aside {
+            background-color: #f1f1f1;
+            padding: 10px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        figure {
+            text-align: center;
+            margin: 20px;
+        }
+
+        figcaption {
+            font-style: italic;
+            color: #555;
+        }
+
+        mark {
+            background-color: yellow;
+        }
+
+        time {
+            font-size: 16px;
+            color: #555;
+        }
+
+        footer {
+            margin-top: 40px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Our Web Page</h1>
+        <p>Discover content with HTML5 semantic elements</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <article>
+            <h2>Understanding HTML5 Elements</h2>
+            <p>HTML5 introduced many new semantic elements, providing more structure and meaning to a webpage. These elements are more descriptive and help search engines and other user agents understand the content better.</p>
+            <section>
+                <h3>What Are Semantic Elements?</h3>
+                <p>Semantic elements describe their meaning in a human- and machine-readable way, making web pages more accessible and improving SEO.</p>
+            </section>
+
+            <time datetime="2025-03-08">March 8, 2025</time>
+
+            <p>The <mark>HTML5 specification</mark> includes elements like <strong>article</strong>, <strong>section</strong>, and <strong>nav</strong> to structure content more effectively.</p>
+        </article>
+
+        <aside>
+            <h3>Related Articles</h3>
+            <ul>
+                <li><a href="#">Semantic HTML Elements</a></li>
+                <li><a href="#">The Evolution of Web Development</a></li>
+                <li><a href="#">Best Practices in HTML5</a></li>
+            </ul>
+        </aside>
+
+        <figure>
+            <img src="https://via.placeholder.com/300" alt="Placeholder Image">
+            <figcaption>This is an example of a figure with a caption.</figcaption>
+        </figure>
+
+        <article>
+            <h2>HTML5 and Modern Web Design</h2>
+            <p>With the introduction of HTML5, web design has become more structured, providing designers with a powerful set of elements to create visually appealing and functional pages.</p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Web Design Company</p>
+        <p>Follow us on social media for more updates!</p>
+    </footer>
+
+</body>
+</html>
