@@ -1,6 +1,212 @@
 1. Understand the basics.html which was already created
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics Page</title>
+</head>
+<body>
+    <h1>Welcome to Basics Page</h1>
+    <p>This is a simple HTML page with basic structure.</p>
+</body>
+</html>
+
 2. Develop your own web page basics.html with all the following html tags
 Html, head, title, body
 Heading, Paragraph, Italic, Bold, Anchor, Unordered List, List Item, ,label,Blockquote, Horizontal rule, Image, Division, Span
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics Page</title>
+</head>
+<body>
+    <h1>Welcome to My Web Page</h1>
+    
+    <p>This is a simple HTML page </p>
+    
+    <h2>Text Formatting</h2>
+    <p><i>This text is italic.</i></p>
+    <p><b>This text is bold.</b></p>
+    
+    <h2>Anchor Tag</h2>
+    <p>Visit <a href="https://www.youtube.com" target="_blank">YOUTUBE</a>.</p>
+    
+    <h2>Unordered List</h2>
+    <ul>
+        <li>fruits</li>
+        <li>flowers</li>
+        <li>vegetables</li>
+    </ul>
+    
+    <h2>Form Label</h2>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    
+    <h2>Blockquote</h2>
+    <blockquote>"This is a blockquote example, used to display quoted text."</blockquote>
+    
+    <h2>Horizontal Rule</h2>
+    <hr>
+    
+    <h2>Image</h2>
+    <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+    
+    <h2>Division and Span</h2>
+    <div style="background-color: lightgray; padding: 10px;">
+        This is a div block containing a <span style="color: blue; font-weight: bold;">span element</span> inside it.
+    </div>
+</body>
+</html>
+
 3. Navigate within the page to a different section.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Navigation</title>
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="#section1">Section 1</a></li>
+            <li><a href="#section2">Section 2</a></li>
+            <li><a href="#section3">Section 3</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content Sections -->
+    <section id="section1">
+        <h2>Section 1</h2>
+        <p>This is the content of section 1.</p>
+    </section>
+
+    <section id="section2">
+        <h2>Section 2</h2>
+        <p>This is the content of section 2.</p>
+    </section>
+
+    <section id="section3">
+        <h2>Section 3</h2>
+        <p>This is the content of section 3.</p>
+    </section>
+
+</body>
+</html>
+
 4. Use pseudo classes and elements into your webpage
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage with Pseudo-Classes and Pseudo-Elements</title>
+    <style>
+        /* Styling for the body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Menu */
+        nav {
+            background-color: #333;
+            padding: 15px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* :hover pseudo-class to change color on hover */
+        nav ul li a:hover {
+            color: #ff6347;
+            text-decoration: underline;
+        }
+
+        /* :first-child pseudo-class to style the first link in the menu */
+        nav ul li:first-child a {
+            font-weight: bold;
+        }
+
+        /* Section styling */
+        section {
+            padding: 60px;
+            margin: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        /* :nth-child pseudo-class to apply a different background color to even sections */
+        section:nth-child(even) {
+            background-color: #e9e9e9;
+        }
+
+        /* ::before pseudo-element to add content before section heading */
+        section h2::before {
+            content: "📌 "; /* Adding a pin emoji before each section title */
+            font-size: 24px;
+        }
+
+        /* :visited pseudo-class to change the color of visited links */
+        a:visited {
+            color: #6a5acd;
+        }
+
+        /* :focus pseudo-class to highlight links when they are focused */
+        a:focus {
+            outline: 2px solid #ff6347;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="#section1">Section 1</a></li>
+            <li><a href="#section2">Section 2</a></li>
+            <li><a href="#section3">Section 3</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content Sections -->
+    <section id="section1">
+        <h2>Section 1</h2>
+        <p>This is the content of section 1. Hover over the navigation links to see the effect!</p>
+    </section>
+
+    <section id="section2">
+        <h2>Section 2</h2>
+        <p>This is the content of section 2. Notice how the first navigation link is bold!</p>
+    </section>
+
+    <section id="section3">
+        <h2>Section 3</h2>
+        <p>This is the content of section 3. The sections alternate background colors.</p>
+    </section>
+
+</body>
+</html>
