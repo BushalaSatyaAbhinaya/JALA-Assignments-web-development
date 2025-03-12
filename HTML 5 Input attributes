@@ -1,8 +1,411 @@
 1. Design the web page using all the below input attributes
 type =text, password, submit, reset, radio, checkbox, button,
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Input Elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+
+        input {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .form-buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Form with Different Input Elements</h1>
+
+    <form action="#">
+        
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+        
+        <fieldset>
+            <legend>Gender:</legend>
+            <label>
+                <input type="radio" name="gender" value="male"> Male
+            </label>
+            <label>
+                <input type="radio" name="gender" value="female"> Female
+            </label>
+        </fieldset>
+
+        
+        <label>
+            <input type="checkbox" name="accept" value="yes"> I accept the terms and conditions
+        </label>
+
+        <div class="form-buttons">
+            
+            <input type="submit" value="Submit">
+
+            
+            <input type="reset" value="Reset">
+        </div>
+
+        
+        <button type="button" onclick="alert('Custom button clicked!')">Click Me</button>
+    </form>
+
+</body>
+</html>
+
 2. HTML5 input Types
 type=number, range, color, date, file, time, month, week, email
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Input Types</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: auto;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML5 Input Types Example</h1>
+
+    <form>
+        <div class="form-group">
+            <label for="quantity">Quantity (number):</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="100" step="1" placeholder="Enter quantity" required>
+        </div>
+
+        <div class="form-group">
+            <label for="volume">Volume (range):</label>
+            <input type="range" id="volume" name="volume" min="0" max="100" step="1" value="50">
+        </div>
+
+        <div class="form-group">
+            <label for="color">Pick a color:</label>
+            <input type="color" id="color" name="color">
+        </div>
+
+        <div class="form-group">
+            <label for="birthday">Birthday (date):</label>
+            <input type="date" id="birthday" name="birthday" required>
+        </div>
+
+        <div class="form-group">
+            <label for="file-upload">Upload a file:</label>
+            <input type="file" id="file-upload" name="file-upload" required>
+        </div>
+
+        <div class="form-group">
+            <label for="appointment">Choose a time for appointment:</label>
+            <input type="time" id="appointment" name="appointment" required>
+        </div>
+
+        <div class="form-group">
+            <label for="month">Choose a month:</label>
+            <input type="month" id="month" name="month" required>
+        </div>
+
+        <div class="form-group">
+            <label for="week">Choose a week:</label>
+            <input type="week" id="week" name="week" required>
+        </div>
+
+        
+        <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
+
 3. Apply all of the below input restrictions
 disabled, max, maxlength, min, readonly, required, size, value
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Restrictions Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: auto;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Input Restrictions Example</h1>
+
+    <form>
+        <div class="form-group">
+            <label for="required-input">Required Input (text):</label>
+            <input type="text" id="required-input" name="required-input" required placeholder="This field is required">
+        </div>
+
+        <div class="form-group">
+            <label for="quantity">Quantity (number):</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="100" value="50" required placeholder="Enter quantity">
+        </div>
+
+        <div class="form-group">
+            <label for="short-text">Short Text (maxlength):</label>
+            <input type="text" id="short-text" name="short-text" maxlength="10" placeholder="Max 10 characters">
+        </div>
+
+        <div class="form-group">
+            <label for="readonly-input">Readonly Input:</label>
+            <input type="text" id="readonly-input" name="readonly-input" value="This is readonly" readonly>
+        </div>
+
+        <div class="form-group">
+            <label for="disabled-input">Disabled Input:</label>
+            <input type="text" id="disabled-input" name="disabled-input" value="You can't edit this" disabled>
+        </div>
+
+        <div class="form-group">
+            <label for="size-input">Size Input:</label>
+            <input type="text" id="size-input" name="size-input" size="20" placeholder="This input size is limited">
+        </div>
+
+        <div class="form-group">
+            <label for="date-input">Date (min and max):</label>
+            <input type="date" id="date-input" name="date-input" min="2020-01-01" max="2025-12-31" required>
+        </div>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
+
 4. Develop a web page using target attribute.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Target Attribute Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Demonstrating Target Attribute</h1>
+
+    <div class="container">
+        <a href="https://www.google.com" target="_blank">Open in a New Tab</a>
+        <a href="https://www.youtube.com" target="_self">Open in the Same Window</a>
+        <a href="https://www.facebook.com" target="_parent">Open in Parent Frame</a>
+        <a href="https://www.instagram.com" target="_top">Open in Full Window</a>
+    </div>
+</body>
+</html>
+
 5. Use I-frames and Marquee in your webpage.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using I-Frames and Marquee</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        iframe {
+            border: 2px solid #007bff;
+            border-radius: 8px;
+            margin-top: 20px;
+            width: 80%;
+            height: 300px;
+        }
+
+        marquee {
+            font-size: 20px;
+            color: #fff;
+            background-color: #007bff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Demonstrating I-Frames and Marquee</h1>
+
+    <marquee behavior="scroll" direction="left">
+        Welcome to our webpage! Enjoy exploring the content below.
+    </marquee>
+
+    <div class="container">
+        <h2>Embedded Website Using I-Frame</h2>
+        <iframe src="https://www.yotube.com" title="YOUTUBE"></iframe>
+    </div>
+
+</body>
+</html>
