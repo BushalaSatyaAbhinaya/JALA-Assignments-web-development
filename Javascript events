@@ -1,1 +1,5 @@
-
+1. Add an event listener to a button. When we click on it it should display current date and time.
+2. Show the javascript validation. When you click submit, the text box doesn't need to be empty.
+3. How console.log() can be used for Debugging.
+4. Write functions to set a cookie, get a cookie and check a cookie in a single program.
+5. Create a JSON object and access it using dot notation.
