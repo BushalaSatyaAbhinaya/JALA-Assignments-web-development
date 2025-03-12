@@ -1,6 +1,203 @@
 1. Write a program which consist of single line and multiline comments.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments Example</title>
+</head>
+<body>
+
+    <!-- This is a single-line comment in HTML -->
+
+    <h1>Welcome to the HTML Comment Example</h1>
+
+    <!-- This section displays a message -->
+    <p>This paragraph demonstrates how to use comments in HTML.</p>
+
+    <!--
+        This is a multi-line comment in HTML.
+        It spans across multiple lines.
+        You can use multi-line comments to explain larger sections of code or provide more detailed information.
+    -->
+    <p>Comments are not displayed in the browser.</p>
+
+    <!-- Single-line comments can also be used to explain small code sections. -->
+
+</body>
+</html>
+
 2. Create an array consisting of fruits names and when we click on a button sort it in descending order.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Fruits in Descending Order</title>
+    <script>
+        
+        function sortFruits() {
+            var fruits = ["Apple", "Banana", "Cherry", "Mango", "Orange", "Pineapple"];
+            
+            
+            fruits.sort(function(a, b) {
+                return b.localeCompare(a);  
+            });
+            
+
+            document.getElementById("sortedFruits").innerHTML = fruits.join(", ");
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Click the button to sort the fruit names in descending order</h2>
+    
+    
+    <button onclick="sortFruits()">Sort Fruits</button>
+    
+    <p id="sortedFruits"></p> 
+
+</body>
+</html>
+
 3. Write a program with FOR/IN loop.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For/In Loop Example</title>
+    <script>
+        
+        function displayFruitPrices() {
+            var fruitPrices = {
+                "Apple": 12,
+                "Banana": 5,
+                "Orange": 8,
+                "Mango": 15,
+                "Pineapple": 20
+            };
+
+            var result = "";
+            
+            
+            for (var fruit in fruitPrices) {
+                
+                result += fruit + ": RS " + fruitPrices[fruit] + "<br>";
+            }
+            
+            
+            document.getElementById("fruitList").innerHTML = result;
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Fruit Prices</h2>
+    
+    
+    <button onclick="displayFruitPrices()">Show Fruit Prices</button>
+    
+    
+    <p id="fruitList"></p>
+
+</body>
+</html>
+
 4. Create an object "person" with properties firstname and lastname. Display these properties using 2 different ways of accessing.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessing Object Properties</title>
+    <script>
+        function displayPerson() {
+            
+            var person = {
+                firstname: "SATYA",
+                lastname: "ABHINAYA"
+            };
+
+            
+            var fullNameDot = person.firstname + " " + person.lastname;
+
+            
+            var fullNameBracket = person["firstname"] + " " + person["lastname"];
+
+            
+            document.getElementById("result").innerHTML = 
+                "Dot Notation: " + fullNameDot + "<br>" + 
+                "Bracket Notation: " + fullNameBracket;
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Accessing Object Properties</h2>
+
+
+    <button onclick="displayPerson()">Show Person's Full Name</button>
+
+    <p id="result"></p>
+
+</body>
+</html>
+
 5. Write a program with variable hoisting(initialization first then declaration).
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Hoisting Example</title>
+    <script>
+        function demonstrateHoisting() {
+            
+            console.log("Before declaration: " + myVar); // undefined (due to hoisting)
+
+            myVar = 10;  
+
+            console.log("After initialization but before declaration: " + myVar); // 10
+
+            var myVar;  
+
+            console.log("After declaration: " + myVar); // 10
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Variable Hoisting Example</h2>
+    
+    <button onclick="demonstrateHoisting()">Show Variable Hoisting</button>
+
+</body>
+</html>
+
 6. Use strict mode in your program and understand why variable not declared causes error.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strict Mode Example</title>
+    <script>
+        
+        "use strict";
+
+        function demonstrateStrictMode() {
+            
+            undeclaredVar = 5; 
+
+            console.log(undeclaredVar);  
+    </script>
+</head>
+<body>
+
+    <h2>Strict Mode Example</h2>
+    <button onclick="demonstrateStrictMode()">Show Strict Mode Error</button>
+
+</body>
+</html>
