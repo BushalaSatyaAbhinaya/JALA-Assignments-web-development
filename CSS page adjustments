@@ -1,5 +1,328 @@
 1. A page which specify a black border for table and if hover on it, page should change it's colour.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Hover Effect</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        
+        table, th, td {
+            border: 2px solid black;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* Change the background color on hover */
+        table:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+        <tr>
+            <td>SATYA</td>
+            <td>19</td>
+            <td>New DELHI</td>
+        </tr>
+        <tr>
+            <td>ABHI</td>
+            <td>25</td>
+            <td>HYDERABAD</td>
+        </tr>
+        <tr>
+            <td>RAMA</td>
+            <td>35</td>
+            <td>CHITHOOR</td>
+        </tr>
+    </table>
+
+</body>
+</html>
+
 2. Apply different visibility by an element (visibility: hidden, visible, collapse) and use different types of display for an element (display: none, inline, block, contents, list-item)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility and Display Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .box {
+            border: 2px solid #333;
+            margin: 10px 0;
+            padding: 10px;
+        }
+
+        .visible-element {
+            visibility: visible;
+            background-color: lightgreen;
+        }
+
+        .hidden-element {
+            visibility: hidden;
+            background-color: lightcoral;
+        }
+
+        .collapse-element {
+            visibility: collapse;
+            background-color: lightyellow;
+        }
+
+        .none-element {
+            display: none;
+        }
+
+        .inline-element {
+            display: inline;
+            background-color: lightblue;
+        }
+
+        .block-element {
+            display: block;
+            background-color: lightpink;
+        }
+
+        .contents-element {
+            display: contents;
+            background-color: lightgray;
+        }
+
+        .list-item-element {
+            display: list-item;
+            background-color: lightcyan;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="box visible-element">
+        <p>Visible element (visibility: visible)</p>
+    </div>
+
+    <div class="box hidden-element">
+        <p>Hidden element (visibility: hidden)</p>
+    </div>
+
+    <div class="box collapse-element">
+        <p>Collapsed element (visibility: collapse)</p>
+    </div>
+
+    <div class="box block-element">
+        <p>Block element (display: block)</p>
+    </div>
+
+    <span class="inline-element box">
+        <p>Inline element (display: inline)</p>
+    </span>
+
+    <div class="none-element box">
+        <p>This won't be displayed (display: none)</p>
+    </div>
+
+    <div class="box contents-element">
+        <p>Contents element (display: contents)</p>
+    </div>
+
+    <ul class="box list-item-element">
+        <li>List item (display: list-item)</li>
+    </ul>
+
+</body>
+</html>
+
 3. A long page which should have two links "click to go to bottom of page" and "click to go to top of page" . Also set their scroll-behavior to scroll smoothly.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Scroll Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            height: 1500px; 
+            padding: 20px;
+            text-align: center;
+        }
+
+        a {
+            font-size: 18px;
+            color: #007bff;
+            text-decoration: none;
+            margin: 20px;
+            padding: 10px;
+            display: inline-block;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+        }
+
+        a:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="#top">Click to go to top of page</a>
+        <a href="#bottom">Click to go to bottom of page</a>
+
+        <p id="top">Scroll down to see the content.</p>
+        <div style="height: 1200px;"></div> 
+        <p id="bottom">You have reached the bottom of the page!</p>
+    </div>
+
+</body>
+</html>
+
 4. Add padding and margin with different size and understand the difference between them.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Scroll Page with Padding and Margin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            height: 1500px; 
+            padding: 40px; 
+            text-align: center;
+            background-color: #f4f4f9;
+        }
+
+        a {
+            font-size: 18px;
+            color: #007bff;
+            text-decoration: none;
+            margin: 30px 0; 
+            padding: 15px 25px;/
+            display: inline-block;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        p {
+            font-size: 20px;
+            margin: 50px 0; 
+            padding: 20px; 
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #ffffff;
+        }
+
+        
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="#top">Click to go to top of page</a>
+        <a href="#bottom">Click to go to bottom of page</a>
+
+        <p id="top">Scroll down to see the content.</p>
+        <div style="height: 1200px;"></div>
+        <p id="bottom">You have reached the bottom of the page!</p>
+    </div>
+
+</body>
+</html>
+
 5. A page with multiple background images for an webpage or element and define their adjustable sizes.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Background Images</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            height: 100vh;
+            background-image: url('https://plus.unsplash.com/premium_photo-1663100722417-6e36673fe0ed?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29kZXJzfGVufDB8fDB8fHww'), 
+                              url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4JjI4803-c8K6QcfR_1jz0tM99uYVFkpl1A&s');
+            background-size: 50% 50%, cover; 
+            background-position: left top, right bottom; 
+            background-repeat: no-repeat, no-repeat; 
+        }
+
+        h1 {
+            text-align: center;
+            padding-top: 50px;
+            font-size: 3em;
+            color: white;
+        }
+
+        p {
+            text-align: center;
+            color: white;
+            font-size: 1.2em;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Multiple Background Images</h1>
+        <p>This page demonstrates how to use multiple background images with adjustable sizes.</p>
+    </div>
+
+</body>
+</html>
