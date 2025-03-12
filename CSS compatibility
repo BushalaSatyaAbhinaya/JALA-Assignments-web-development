@@ -1,1 +1,5 @@
-
+1. Create a table and apply table-layout as fixed and none
+2. Create a list and change its list-style-type
+3. Create a grid with of different types
+4. Create a hero image
+5. Write a program of view-port for grid, media queries, image and video.
