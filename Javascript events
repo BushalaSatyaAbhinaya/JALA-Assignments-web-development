@@ -1,5 +1,252 @@
 1. Add an event listener to a button. When we click on it it should display current date and time.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Date and Time</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Click the Button to Display Current Date and Time</h1>
+
+    <button id="showDateTimeButton">Show Date & Time</button>
+
+    <div id="output"></div>
+
+    <script>
+        function displayDateTime() {
+            const currentDate = new Date();
+            const dateTimeString = currentDate.toLocaleString(); // Converts to a readable format
+            document.getElementById('output').textContent = 'Current Date & Time: ' + dateTimeString;
+        }
+
+        document.getElementById('showDateTimeButton').addEventListener('click', displayDateTime);
+    </script>
+
+</body>
+</html>
+
 2. Show the javascript validation. When you click submit, the text box doesn't need to be empty.
-3. How console.log() can be used for Debugging.
-4. Write functions to set a cookie, get a cookie and check a cookie in a single program.
-5. Create a JSON object and access it using dot notation.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        form {
+            margin-top: 20px;
+            display: inline-block;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+            width: 200px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Form Validation</h1>
+
+    <form id="myForm" onsubmit="return validateForm()">
+        <label for="name">Enter your name:</label><br>
+        <input type="text" id="name" name="name">
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById('name').value; 
+            if (name === "") {
+                alert("Name field cannot be empty!");
+                return false; 
+            }
+            return true;
+        }
+    </script>
+
+</body>
+</html>
+
+
+3. Write functions to set a cookie, get a cookie and check a cookie in a single program.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Handling</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Cookie Handling Example</h1>
+
+    <button onclick="setCookie('username', 'JohnDoe', 7)">Set Cookie</button>
+    <button onclick="alert(getCookie('username'))">Get Cookie</button>
+    <button onclick="alert(checkCookie('username') ? 'Cookie exists' : 'Cookie does not exist')">Check Cookie</button>
+
+    <script>
+        function setCookie(name, value, days) {
+            let date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));  
+            let expires = "expires=" + date.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";  
+            alert('Cookie has been set!');
+        }
+
+        function getCookie(name) {
+            let nameEQ = name + "=";
+            let ca = document.cookie.split(';'); 
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length);  
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length); 
+            }
+            return "";  
+        }
+
+       
+        function checkCookie(name) {
+            let cookie = getCookie(name);
+            if (cookie !== "") {
+                return true;  
+            } else {
+                return false;  
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+4. Create a JSON object and access it using dot notation.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Object with Dot Notation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Access JSON Object Using Dot Notation</h1>
+    <div id="output"></div>
+
+    <script>
+
+        const person = {
+            name: "ABHI",
+            age: 19,
+            city: "Kakinada",
+            hobbies: ["reading", "traveling", "coding"],
+            address: {
+                street: "Main Station",
+                city: "Kakinada",
+                zip: "10001"
+            }
+        };
+
+        
+        const name = person.name;  
+        const age = person.age;    
+        const city = person.city;  
+        const hobby = person.hobbies[1];  
+        const street = person.address.street;  
+
+        document.getElementById("output").innerHTML = `
+            Name: ${name}<br>
+            Age: ${age}<br>
+            City: ${city}<br>
+            Second Hobby: ${hobby}<br>
+            Street: ${street}
+        `;
+    </script>
+
+</body>
+</html>
