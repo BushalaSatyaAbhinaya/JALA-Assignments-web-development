@@ -1,4 +1,352 @@
-1. Develop a web page with non-semantic elements <div> and <span>
-2. Develop a web page with the semantic elements <form>, <table> and <article>
-3. Use all the HTML5 tags and develop a web page
-article, aside, figcaption, figure,footer,header, hgroup,mark,nav, section,time
+1. Apply CSS shadow effects like for image box and hover a cursor.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Shadow Effect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+
+        .image-box {
+            width: 300px;
+            height: 200px;
+            margin: 0 auto;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); 
+            transition: box-shadow 0.3s ease; 
+             }
+
+        .image-box:hover {
+            box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5); 
+            cursor: pointer; 
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px; 
+
+    </style>
+</head>
+<body>
+
+    <h1>Image Box with Hover Shadow Effect</h1>
+
+    <div class="image-box">
+        <img src="https://via.placeholder.com/300x200" alt="Placeholder Image">
+    </div>
+
+</body>
+</html>
+
+2. Use CSS animations (name,duration,iteration-count & delay) and paginations(Hoverable,with and without spaces).
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations and Pagination</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f4f4f9;
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .animated-box {
+            width: 200px;
+            height: 200px;
+            background-color: #007bff;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            margin: 20px;
+            animation: slideIn 1s ease-out 1s forwards; /* Name, Duration, Delay, Iteration */
+        }
+
+        .animated-box:hover {
+            background-color: #0056b3;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+
+        .pagination.space-between li {
+            margin: 0 10px;
+        }
+
+        .pagination.no-space li {
+            margin: 0;
+        }
+
+        .pagination li {
+            display: inline-block;
+        }
+
+        .pagination li a {
+            display: block;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .pagination li a:hover {
+            background-color: #0056b3;
+        }
+
+        .pagination.hoverable li a:hover {
+            background-color: #28a745;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>CSS Animations and Pagination</h1>
+
+    <div class="animated-box">
+        Hello!
+    </div>
+
+
+    <h2>Pagination with Spaces</h2>
+    <ul class="pagination space-between">
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+    </ul>
+
+    <h2>Pagination Without Spaces</h2>
+    <ul class="pagination no-space">
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+    </ul>
+
+    <h2>Hoverable Pagination</h2>
+    <ul class="pagination hoverable">
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+    </ul>
+
+</body>
+</html>
+
+3. Add positions to CSS block (static, relative, fixed, absolute and sticky).
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 1500px; 
+            background-color: #f4f4f9;
+        }
+
+        .static {
+            position: static;
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+        }
+
+        .relative {
+            position: relative;
+            background-color: #28a745;
+            color: white;
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+            top: 50px; 
+            left: 30px; 
+        }
+
+        .fixed {
+            position: fixed;
+            background-color: #ff5733;
+            color: white;
+            padding: 20px;
+            bottom: 0;
+            right: 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        .absolute {
+            position: absolute;
+            background-color: #6f42c1;
+            color: white;
+            padding: 20px;
+            top: 200px;
+            left: 200px;
+            text-align: center;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 0;
+            background-color: #ffc107;
+            color: black;
+            padding: 20px;
+            text-align: center;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Positioning Examples</h1>
+
+    <div class="static">Static Positioning</div>
+
+    <div class="relative">Relative Positioning</div>
+
+    <div class="fixed">Fixed Positioning (Stays at bottom of the screen)</div>
+
+    <div class="absolute">Absolute Positioning (Moves based on the parent)</div>
+
+    <div class="sticky">Sticky Positioning (Sticks to top when scrolling)</div>
+
+    <p>Scroll down to see the sticky positioning in action.</p>
+
+</body>
+</html>
+
+4. Handling Overflow using scroll.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow Scroll Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+
+        .scroll-container {
+            width: 300px; 
+            height: 200px; 
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            overflow: scroll; 
+            border-radius: 10px;
+        }
+
+        .content {
+            height: 400px;
+            width: 500px; 
+            background-color: #ffc107;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .auto-container {
+            width: 300px;
+            height: 200px;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            overflow: auto; 
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Handling Overflow Using Scroll</h1>
+
+    <div class="scroll-container">
+        <div class="content">
+            <p>This is some content that exceeds the container's dimensions. Scrollbars should always appear.</p>
+        </div>
+    </div>
+
+    <div class="auto-container">
+        <div class="content">
+            <p>This content will trigger scrollbars only when it exceeds the container's size. If content is smaller, no scrollbars will appear.</p>
+        </div>
+    </div>
+
+</body>
+</html>
+
+5. Adding Opacity to a image
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Opacity Example</title>
+    <style>
+        .image-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .image-opacity {
+            opacity: 0.5; 
+            transition: opacity 0.3s ease; 
+        }
+
+        .image-opacity:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="image-container">
+        <img src="https://via.placeholder.com/300" alt="Placeholder Image" class="image-opacity">
+        <p>Hover over the image to change its opacity</p>
+    </div>
+
+</body>
+</html>
